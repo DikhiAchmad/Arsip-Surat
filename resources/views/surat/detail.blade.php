@@ -29,6 +29,5 @@
                         <a href="#" class="btn btn-primary">Edit/Ganti File</a>
             </div>
         </div>
-
     </div>
 @endsection
