@@ -46,15 +46,15 @@
                                 <td>{{ date('Y-m-d h:i', strtotime($item->created_at)) }}</td>
                                 <td>
                                     <button type="button" class="btn btn-danger btn-sm" data-bs-toggle="modal"
-                                        data-bs-target="#delete{{ $item->id }}">
+                                        data-bs-target="#deleted{{ $item->id }}">
                                         Hapus
                                     </button>
                                     <a href="{{ $item->file_surat }}" class="btn btn-warning btn-sm">Unduh</a>
                                     <a href="{{ route('surat.show', $item->id) }}" class="btn btn-info btn-sm">Lihat >></a>
                                 </td>
                             </tr>
-                            <div class="modal fade" id="delete{{ $item->id }}" tabindex="-1" role="dialog"
-                                aria-labelledby="delete{{ $item->id }}" aria-hidden="true">
+                            <div class="modal fade" id="deleted{{ $item->id }}" tabindex="-1" role="dialog"
+                                aria-labelledby="deleted{{ $item->id }}" aria-hidden="true">
                                 <div class="modal-dialog modal-dialog-centered modal-dialog-centered modal-dialog-scrollable"
                                     role="document">
                                     <form action="{{ route('surat.destroy', $item->id) }}" method="POST">
